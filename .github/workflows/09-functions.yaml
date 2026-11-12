@@ -8,7 +8,7 @@ jobs:
         steps:
             - name: Print PR Title
               run: echo "${{github.event.pull_request.title}}"
-            - name: Print PR Title
+            - name: Print PR Labels
               run: |
                 cat << EOF
                 ${{ toJSON(github.event.pull_request.labels)}}
