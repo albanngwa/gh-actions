@@ -1,0 +1,9 @@
+name: 09 -Functions
+on: 
+    pull_request: 
+jobs:
+    echo1:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Failing step
+              run: exit 1
