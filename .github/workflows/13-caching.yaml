@@ -3,10 +3,19 @@ name: 13 - Caching
 on:
   workflow_dispatch:
     inputs:
-      build-cache:
+      use-cache:
         type: boolean
         default: true
         description: Whether to execute cache step
+      node-version:
+        description: Node Version
+        type: choice
+        options:
+          - 18.x
+          - 20.x
+          - 26.x
+        default: 26.x
+           
 
 
 jobs:
@@ -21,7 +30,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-            node-version: '26.4.0'
+            node-version: ${{inputs.node-version}}
       - name: Install dependencie
         run: npm ci
       - name: Testing
