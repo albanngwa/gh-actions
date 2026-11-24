@@ -11,10 +11,10 @@ on:
         description: Node Version
         type: choice
         options:
-          - 18.x
-          - 20.x
-          - 26.x
-        default: 26.x
+          - 26.3.1
+          - 26.3.4
+          - 26.4.0
+        default: 26.4.0
            
 
 
